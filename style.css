@@ -1,0 +1,11 @@
+/* pokemon color palette
+YELLOW = #FFCB05
+RED = #F62D14
+DARK RED = #811E09
+LIGHT BLUE = #3D7DCA
+BLUE = 003A70
+*/
+
+.capitalize {
+    text-transform: capitalize;
+}
