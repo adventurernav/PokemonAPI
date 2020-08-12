@@ -22,6 +22,7 @@ function fetchPokemon(e) {
 function toPokedex(pokemon){
   const pokePic = document.querySelector('#pokePic');
   const pokeStats = document.querySelector('#pokeStats');
+  const numLi = document.createElement('li')
   const nameLi = document.createElement('li');
   const typeLi = document.createElement('li');
   // const flavorLi = document.createElement('li');
@@ -31,6 +32,7 @@ function toPokedex(pokemon){
   pokePic.innerHTML = '';
   pokeStats.innerHTML = '';
 
+  numLi.innerText = pokemon.id;
   nameLi.innerText = pokemon.name;
   nameLi.classList.add('capitalize');
   for (let i = 0; i < pokemon.types.length; i++) {
@@ -41,6 +43,7 @@ function toPokedex(pokemon){
   // flavorLi.innerText = 
   newImg.src = pokemon.sprites.front_default;
 
+  pokeStats.appendChild(numLi);
   pokeStats.appendChild(nameLi);
   pokeStats.appendChild(typeLi);
   // pokeStats.appendChild(flavorLi);

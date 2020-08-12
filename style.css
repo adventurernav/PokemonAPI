@@ -9,3 +9,6 @@ BLUE = 003A70
 .capitalize {
     text-transform: capitalize;
 }
+ul{
+    list-style: none;
+}
