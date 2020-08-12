@@ -1,14 +1,54 @@
-/* pokemon color palette
-YELLOW = #FFCB05
-RED = #F62D14
-DARK RED = #811E09
-LIGHT BLUE = #3D7DCA
-BLUE = 003A70
-*/
-
+@font-face{
+    font-family: 'pokeFont';
+    src: url(./assets/pokeFont2/PocketMonk-15ze.ttf) format('truetype');
+}
 .capitalize {
     text-transform: capitalize;
 }
 ul{
     list-style: none;
+}
+#title{
+    color: #ffcb05;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: #3d7dca; 
+    font-family: pokeFont;
+    letter-spacing: 1rem;
+    font-size: 500%;
+}
+body {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    text-align: center;
+    background-color: rgb(35, 35, 35);
+}
+#pokePic{
+    background-color: #3d7dca;
+    margin: 2rem auto 0 auto;
+}
+#pokeInfo{
+    background-color: #dc0a2d;
+    color: white;
+    margin: auto auto 5rem auto;
+}
+#pokeForm{
+    margin: 5rem, auto, 5rem, auto;
+}
+#pokedex{
+    width: 100vw;
+}
+#submitBtn, #userInput{
+    background-color: #ffcb05;
+    border: 3px #3d7dca solid;
+    height: 3rem;
+}
+label{
+    font-size: 2rem;
+    color: #ffcb05;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: #3d7dca; 
+    font-family: pokeFont;
+}
+h2{
+    font-weight: lighter;
 }

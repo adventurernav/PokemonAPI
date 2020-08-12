@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+    <title>API Pokedex</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    
 </head>
 <body>
-    <h1>Hello, I'm AdventurerNav</h1>
-    <h3>and I play PokemonGo!</h3>
-    <p>I have developed this Pokedex web application using the Pokemon API. It's purpose is to allow the user to easily search for information on different Pokemon.</p>
+    <header>
+        <h1 id="title">Welcome  to  My  Pokedex!</h1>
+        <h2>I have developed this Pokedex web application using the Pokemon API. <br>It's purpose is to allow the user to easily view each different Pokemon's name, number, type(s) and image.</h2>
+    </header>
     <form action="" id="pokemonForm">
-        <label for="input">Search for a pokemon by name or number:</label>
+        <label for="input">Search for a pokemon:</label>
         <input type="search" placeholder="i.e. 1 or Bulbasaur..." id="userInput">
         <button type="submit" id="submitBtn" >Search</button>
     </form>
-    <div id="pokePic">
+    <div id="resultsContainer">
+            <div id="pokePic">
+            </div>
+            <div id="pokeInfo">
+                <ul id="pokeStats"></ul>
+            </div>
     </div>
-    <div id="pokeInfo">
-        <ul id="pokeStats"></ul>
-    </div>
-    <img src="./assets/pokedex-reference.png" alt="Pokedex">
+    <img id="pokedex" src="./assets/pokedex-reference.png" alt="Pokedex">
 <script src="main.js"></script>
 </body>
 </html>
