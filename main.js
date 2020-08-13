@@ -4,13 +4,14 @@ let singleNum;
 function fetchPokemon(e) {
   e.preventDefault();
   let input = document.querySelector('#userInput');
-  let singleMan = input.value;
+  let singleMan = input.value.toLowerCase();
   const baseURL = `https://pokeapi.co/api/v2/pokemon/${singleMan}/`;
    fetch(baseURL)
     .then(result => result.json())
     .then(data => {
       console.log(data);
       toPokedex(data);
+      fetchFlavor(data.species.url);
     })
     .catch(err => {
       console.log(err);
@@ -38,4 +39,24 @@ function toPokedex(pokemon){
   pokeStats.appendChild(nameLi);
   pokeStats.appendChild(typeLi);
   pokePic.appendChild(newImg);
+}
+// Flavor Text
+function fetchFlavor(flavorURL) {
+   fetch(flavorURL)
+    .then(result => result.json())
+    .then(data => {
+      console.log(data);
+      flavorText(data);
+    })
+    .catch(err => {
+      console.log(err);
+      alert('Pokemon not found. Please try again.');});
+}
+function flavorText(species) {
+  const pokeFlavor = document.querySelector('#pokeFlavor');
+  const flavorLi = document.createElement('li')
+  pokeFlavor.innerHTML = '';
+  let str = species.flavor_text_entries[1].flavor_text;
+  flavorLi.innerText = str //.replace()
+  pokeFlavor.appendChild(flavorLi);
 }

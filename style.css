@@ -5,8 +5,11 @@
 .capitalize {
     text-transform: capitalize;
 }
-ul{
-    list-style: none;
+body {
+    font-family: 'Saira Condensed', sans-serif;
+    color: white;
+    text-align: center;
+    background-color: rgb(35, 35, 35);
 }
 #title{
     color: #ffcb05;
@@ -16,26 +19,11 @@ ul{
     letter-spacing: 1rem;
     font-size: 500%;
 }
-body {
-    font-family: 'Saira Condensed', sans-serif;
-    color: white;
-    text-align: center;
-    background-color: rgb(35, 35, 35);
-}
-#pokePic{
-    background-color: #3d7dca;
-    margin: 2rem auto 0 auto;
-}
-#pokeInfo{
-    background-color: #dc0a2d;
-    color: white;
-    margin: auto auto 5rem auto;
+h2{
+    font-weight: lighter;
 }
 #pokeForm{
     margin: 5rem, auto, 5rem, auto;
-}
-#pokedex{
-    width: 100vw;
 }
 #submitBtn, #userInput{
     background-color: #ffcb05;
@@ -49,6 +37,29 @@ label{
     -webkit-text-stroke-color: #3d7dca; 
     font-family: pokeFont;
 }
-h2{
-    font-weight: lighter;
+ul{
+    list-style: none;
+}
+#resultsContainer{
+    width: 85vw;
+    margin: auto;
+}
+#pokePic{
+    background-color: #3d7dca;
+    margin: 2rem auto 0 auto;
+}
+#pokeInfo{
+    background-color: #dc0a2d;
+    color: white;
+}
+#pokeFlavor{
+    background-color: #ffcb05;
+    color: black;
+    margin: auto;
+    height: fit-content;
+    margin: auto auto 5rem auto;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+#pokedex{
+    width: 100vw;
 }
