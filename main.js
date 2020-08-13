@@ -15,7 +15,7 @@ function fetchPokemon(e) {
     })
     .catch(err => {
       console.log(err);
-      alert('Pokemon not found. Please try again.');});
+      alert(`Pokemon ${singleMan} not found. Please try again.`);});
 }
 function toPokedex(pokemon){
   const pokePic = document.querySelector('#pokePic');
@@ -24,6 +24,7 @@ function toPokedex(pokemon){
   const nameLi = document.createElement('li');
   const typeLi = document.createElement('li');
   const newImg = document.createElement('img');
+  
   let types = '';
   pokePic.innerHTML = '';
   pokeStats.innerHTML = '';
@@ -35,12 +36,13 @@ function toPokedex(pokemon){
   typeLi.innerText = `Types: ${types}`;
   typeLi.classList.add('capitalize');
   newImg.src = pokemon.sprites.front_default;
+  numLi.classList.add('padding');
+  typeLi.classList.add('padding');
   pokeStats.appendChild(numLi);
   pokeStats.appendChild(nameLi);
   pokeStats.appendChild(typeLi);
   pokePic.appendChild(newImg);
 }
-// Flavor Text
 function fetchFlavor(flavorURL) {
    fetch(flavorURL)
     .then(result => result.json())
@@ -57,6 +59,7 @@ function flavorText(species) {
   const flavorLi = document.createElement('li')
   pokeFlavor.innerHTML = '';
   let str = species.flavor_text_entries[1].flavor_text;
-  flavorLi.innerText = str //.replace()
+  flavorLi.innerText = str .replace(/[\x00-\x1F\x7F-\x9F]/g, " ");
+  flavorLi.classList.add('padding');
   pokeFlavor.appendChild(flavorLi);
 }

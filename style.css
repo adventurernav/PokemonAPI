@@ -56,10 +56,11 @@ ul{
     background-color: #ffcb05;
     color: black;
     margin: auto;
-    height: fit-content;
     margin: auto auto 5rem auto;
-    /* font-family: Arial, Helvetica, sans-serif; */
 }
 #pokedex{
     width: 100vw;
+}
+.padding{
+    padding: 1rem;
 }
